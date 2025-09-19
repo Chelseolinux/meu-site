@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Isabel Baptista</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-image {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+        
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 25px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 40px 0;
+            min-height: 500px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        /* Dashboard */
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .card p {
+            color: #777;
+        }
+        
+        /* About Creator */
+        .about-creator {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .creator-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .creator-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 5px solid var(--secondary);
+        }
+        
+        .creator-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .creator-info {
+            max-width: 600px;
+        }
+        
+        .creator-info h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .creator-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            width: 100%;
+        }
+        
+        .detail-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .detail-card h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .detail-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill {
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Table */
+        .table-container {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .paid {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .pending {
+            background-color: var(--warning);
+            color: white;
+        }
+        
+        .overdue {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .actions button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        
+        .edit-btn {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .delete-btn {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        /* Forms */
+        .form-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary);
+        }
+        
+        /* Courses List */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-img {
+            height: 160px;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .course-content {
+            padding: 20px;
+        }
+        
+        .course-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .course-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* Payments */
+        .payment-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .payment-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .payment-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .payment-details {
+            margin-bottom: 20px;
+        }
+        
+        .payment-details p {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .payment-details span {
+            font-weight: 500;
+        }
+        
+        .payment-action {
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-content p {
+            margin: 10px 0;
+        }
+        
+        .social-icons {
+            margin: 20px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Page Content */
+        .page-content {
+            display: none;
+        }
+        
+        .page-content.active {
+            display: block;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav li {
+                margin: 5px 10px;
+            }
+            
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+            
+            .courses-grid, .payment-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-creator {
+                padding: 20px;
+            }
+            
+            .creator-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-image">
+                    <!-- Substitua pelo logo da escola -->
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMzNDk4ZGIiLz48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5FSUI8L3RleHQ+PC9zdmc+" alt="Escola Isabel Baptista">
+                </div>
+                <div>
+                    <h1>Escola Isabel Baptista</h1>
+                    <span>Educação de Excelência desde 1995</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Início</a></li>
+                    <li><a href="#" class="nav-link" data-page="courses">Cursos</a></li>
+                    <li><a href="#" class="nav-link" data-page="students">Alunos</a></li>
+                    <li><a href="#" class="nav-link" data-page="payments">Pagamentos</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">Sobre</a></li>
+                    <li><a href="#" class="nav-link" data-page="contacts">Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page-content active">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Bem-vindo à Escola Isabel Baptista</h2>
+                <p>Formando os líderes do amanhã com educação de qualidade e valores sólidos</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content container">
+            <h2 class="section-title">Sistema de Gestão de Alunos</h2>
+            
+            <!-- Dashboard -->
+            <div class="dashboard">
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h3>258</h3>
+                    <p>Alunos Matriculados</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>12</h3>
+                    <p>Cursos Disponíveis</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>192</h3>
+                    <p>Pagamentos em Dia</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>66</h3>
+                    <p>Pagamentos Pendentes</p>
+                </div>
+            </div>
+            
+            <!-- Student Table -->
+            <h2 class="section-title">Turma de Informática - 12º Ano</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome do Aluno</th>
+                            <th>Idade</th>
+                            <th>Contacto</th>
+                            <th>Status de Pagamento</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1001</td>
+                            <td>Chelseo Fernandes</td>
+                            <td>17</td>
+                            <td>chelseoagostinho91@email.com</td>
+                            <td><span class="status paid">Pago</span></td>
+                            <td class="actions">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1002</td>
+                            <td>Sauca Filipe</td>
+                            <td>18</td>
+                            <td>SaucaFilipe@email.com</td>
+                            <td><span class="status pending">Pendente</span></td>
+                            <td class="actions">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1003</td>
+                            <td>Carla Mendes</td>
+                            <td>17</td>
+                            <td>carla.mendes@email.com</td>
+                            <td><span class="status paid">Pago</span></td>
+                            <td class="actions">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </section>
+
+    <!-- Courses Page -->
+    <section id="courses" class="page-content">
+        <div class="main-content container">
+            <h2 class="section-title">Nossos Cursos</h2>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Informática</h3>
+                        <p>Curso técnico em informática com foco em programação, redes e manutenção de computadores.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 3 anos</span>
+                            <span><i class="fas fa-user-graduate"></i> 120 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Gestão Empresarial</h3>
+                        <p>Aprenda a administrar empresas, recursos humanos e finanças com nosso curso de gestão.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 2 anos</span>
+                            <span><i class="fas fa-user-graduate"></i> 85 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-briefcase-medical"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Enfermagem</h3>
+                        <p>Formação completa em enfermagem com estágios supervisionados em hospitais parceiros.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 4 anos</span>
+                            <span><i class="fas fa-user-graduate"></i> 150 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Direito</h3>
+                        <p>Curso de direito com professores experientes e metodologia focada na prática jurídica.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 5 anos</span>
+                            <span><i class="fas fa-user-graduate"></i> 200 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Farmacologia</h3>
+                        <p>Estudo dos medicamentos, sua composição, efeitos e aplicações terapêuticas.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 4 anos</span>
+                            <span><i class="fas fa-user-graduate"></i> 90 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Cursos do PUNIV</h3>
+                        <p>Programa Universitário com diversos cursos de extensão e especialização.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 1-2 anos</span>
+                            <span><i class="fas fa-user-graduate"></i> 75 alunos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Page -->
+    <section id="students" class="page-content">
+        <div class="main-content container">
+            <h2 class="section-title">Gestão de Alunos</h2>
+            
+            <!-- Student Table -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome do Aluno</th>
+                            <th>Idade</th>
+                            <th>Curso</th>
+                            <th>Contacto</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1001</td>
+                            <td>Ana Silva</td>
+                            <td>17</td>
+                            <td>Informática</td>
+                            <td>ana.silva@email.com</td>
+                            <td><span class="status paid">Ativa</span></td>
+                            <td class="actions">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1002</td>
+                            <td>Bruno Costa</td>
+                            <td>18</td>
+                            <td>Gestão Empresarial</td>
+                            <td>bruno.costa@email.com</td>
+                            <td><span class="status pending">Pendente</span></td>
+                            <td class="actions">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1003</td>
+                            <td>Carla Mendes</td>
+                            <td>17</td>
+                            <td>Enfermagem</td>
+                            <td>carla.mendes@email.com</td>
+                            <td><span class="status paid">Ativa</span></td>
+                            <td class="actions">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1004</td>
+                            <td>Diogo Lima</td>
+                            <td>19</td>
+                            <td>Direito</td>
+                            <td>diogo.lima@email.com</td>
+                            <td><span class="status overdue">Inativo</span></td>
+                            <td class="actions">
+                                <button class="edit-btn">Editar</button>
+                                <button class="delete-btn">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Add Student Form -->
+            <h2 class="section-title">Adicionar Novo Aluno</h2>
+            <div class="form-container">
+                <form id="student-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" placeholder="Digite o nome do aluno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Idade</label>
+                        <input type="number" id="age" placeholder="Digite a idade" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Digite o email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Curso</label>
+                        <select id="course" required>
+                            <option value="">Selecione o curso</option>
+                            <option value="informatica">Informática</option>
+                            <option value="gestao">Gestão Empresarial</option>
+                            <option value="enfermagem">Enfermagem</option>
+                            <option value="direito">Direito</option>
+                            <option value="farmacologia">Farmacologia</option>
+                            <option value="puniv">Cursos do PUNIV</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status" required>
+                            <option value="">Selecione o status</option>
+                            <option value="paid">Ativo</option>
+                            <option value="pending">Pendente</option>
+                            <option value="overdue">Inativo</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Adicionar Aluno</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payments Page -->
+    <section id="payments" class="page-content">
+        <div class="main-content container">
+            <h2 class="section-title">Gestão de Pagamentos</h2>
+            
+            <div class="payment-cards">
+                <div class="payment-card">
+                    <h3>Pagamento Pendente</h3>
+                    <div class="payment-details">
+                        <p>Aluno: <span>Bruno Costa</span></p>
+                        <p>Curso: <span>Gestão Empresarial</span></p>
+                        <p>Valor: <span>25.000,00 Kz</span></p>
+                        <p>Vencimento: <span>15/11/2024</span></p>
+                        <p>Status: <span class="status pending">Pendente</span></p>
+                    </div>
+                    <div class="payment-action">
+                        <button class="btn btn-primary">Marcar como Pago</button>
+                    </div>
+                </div>
+                
+                <div class="payment-card">
+                    <h3>Pagamento Efectuado</h3>
+                    <div class="payment-details">
+                        <p>Aluno: <span>Ana Silva</span></p>
+                        <p>Curso: <span>Informática</span></p>
+                        <p>Valor: <span>30.000,00 Kz</span></p>
+                        <p>Data de Pagamento: <span>05/11/2024</span></p>
+                        <p>Status: <span class="status paid">Pago</span></p>
+                    </div>
+                    <div class="payment-action">
+                        <button class="btn btn-primary">Emitir Recibo</button>
+                    </div>
+                </div>
+                
+                <div class="payment-card">
+                    <h3>Pagamento Atrasado</h3>
+                    <div class="payment-details">
+                        <p>Aluno: <span>Diogo Lima</span></p>
+                        <p>Curso: <span>Direito</span></p>
+                        <p>Valor: <span>35.000,00 Kz</span></p>
+                        <p>Vencimento: <span>25/10/2024</span></p>
+                        <p>Status: <span class="status overdue">Atrasado</span></p>
+                    </div>
+                    <div class="payment-action">
+                        <button class="btn btn-primary">Enviar Lembrete</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Registo de Pagamentos</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Referência</th>
+                            <th>Aluno</th>
+                            <th>Curso</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>REF202411001</td>
+                            <td>Ana Silva</td>
+                            <td>Informática</td>
+                            <td>30.000,00 Kz</td>
+                            <td>05/11/2024</td>
+                            <td><span class="status paid">Pago</span></td>
+                        </tr>
+                        <tr>
+                            <td>REF202410205</td>
+                            <td>Carla Mendes</td>
+                            <td>Enfermagem</td>
+                            <td>28.000,00 Kz</td>
+                            <td>28/10/2024</td>
+                            <td><span class="status paid">Pago</span></td>
+                        </tr>
+                        <tr>
+                            <td>REF202410198</td>
+                            <td>Bruno Costa</td>
+                            <td>Gestão Empresarial</td>
+                            <td>25.000,00 Kz</td>
+                            <td>15/10/2024</td>
+                            <td><span class="status overdue">Atrasado</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page-content">
+        <div class="main-content container">
+            <h2 class="section-title">Sobre o Criador</h2>
+            
+            <div class="about-creator">
+                <div class="creator-header">
+                    <div class="creator-photo">
+                        <!-- Substitua pela sua foto -->
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+PGNpcmNsZSBjeD0iMTAwIiBjeT0iNzUiIHI9IjUwIiBmaWxsPSIjZGRkIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI4MCIgZmlsbD0iI2RkZCIvPjxjaXJjbGUgY3g9IjgwIiBjeT0iNjUiIHI9IjUiIGZpbGw9IiM1NTUiLz48Y2lyY2xlIGN4PSIxMjAiIGN5PSI2NSIgcj0iNSIgZmlsbD0iIzU1NSIvPjxwYXRoIGQ9Ik04MCAxMDAgQyA5MCAxMjAgMTEwIDEyMCAxMjAgMTAwIiBzdHJva2U9IiM1NTUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==" alt="Chelseo Agostinho">
+                    </div>
+                    <div class="creator-info">
+                        <h2>Chelseo Agostinho Fernandes Bryan</h2>
+                        <p>Desenvolvedor Web e Estudante de Programação</p>
+                    </div>
+                </div>
+                
+                <div class="creator-details">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-user"></i> Informações Pessoais</h3>
+                        <p><strong>Data de Nascimento:</strong> 5 de Novembro de 2006</p>
+                        <p><strong>Naturalidade:</strong> Cazenga, Luanda, Angola</p>
+                        <p><strong>Morada Actual:</strong> Bita Mutamba, Luanda, Angola</p>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Formação</h3>
+                        <p><strong>Escola:</strong> Escola Isabel Baptista</p>
+                        <p><strong>Curso:</strong> Informática - 12º Ano</p>
+                        <p><strong>Ano Lectivo:</strong> 2024/2025</p>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3><i class="fas fa-code"></i> Competências Técnicas</h3>
+                        <div class="skills">
+                            <span class="skill">C</span>
+                            <span class="skill">C++</span>
+                            <span class="skill">C#</span>
+                            <span class="skill">Java</span>
+                            <span class="skill">Python</span>
+                            <span class="skill">HTML</span>
+                            <span class="skill">CSS</span>
+                            <span class="skill">JavaScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3><i class="fas fa-heart"></i> Interesses</h3>
+                        <p>Desenvolvimento Web, Programação, Tecnologia, Inovação, Educação</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Sobre a Escola</h2>
+            <div class="about-creator">
+                <div class="creator-header">
+                    <div class="creator-photo">
+                        <!-- Substitua pelo logo da escola -->
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzNDk4ZGIiLz48dGV4dCB4PSIxMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkVJQjwvdGV4dD48L3N2Zz4=" alt="Escola Isabel Baptista">
+                    </div>
+                    <div class="creator-info">
+                        <h2>Escola Isabel Baptista</h2>
+                        <p>Educação de Excelência desde 1995</p>
+                    </div>
+                </div>
+                
+                <div class="creator-details">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-history"></i> Nossa História</h3>
+                        <p>Fundada em 1995, a Escola Isabel Baptista tem como missão proporcionar educação de qualidade e formar cidadãos preparados para os desafios do futuro.</p>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3><i class="fas fa-bullseye"></i> Missão</h3>
+                        <p>Oferecer um ensino de excelência que promova o desenvolvimento integral dos alunos, preparando-os para o mercado de trabalho e para a vida em sociedade.</p>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3><i class="fas fa-eye"></i> Visão</h3>
+                        <p>Ser referência em educação em Angola, reconhecida pela qualidade do ensino e pela formação de profissionais competentes e éticos.</p>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3><i class="fas fa-star"></i> Valores</h3>
+                        <p>Excelência acadêmica, ética, responsabilidade social, inovação e respeito pela diversidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Page -->
+    <section id="contacts" class="page-content">
+        <div class="main-content container">
+            <h2 class="section-title">Contactos</h2>
+            
+            <div class="form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Seu Nome</label>
+                        <input type="text" id="contact-name" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Seu Email</label>
+                        <input type="email" id="contact-email" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Assunto</label>
+                        <input type="text" id="contact-subject" placeholder="Assunto da mensagem" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Mensagem</label>
+                        <textarea id="contact-message" rows="5" placeholder="Sua mensagem..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+            
+            <div class="dashboard">
+                <div class="card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Endereço</h3>
+                    <p>123. Bita Mutamba, Angola, Luanda</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p>+244 923 456 789</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>chelseoagostinhof@gmail.com</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horário</h3>
+                    <p>Seg-Sex: 8h-18h<br>Sábado: 9h-13h</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Escola Isabel Baptista</h2>
+            </div>
+            <p>123. Bita Mutamba • Angola, Luanda</p>
+            <p>Telefone: +244 923 456 789 • Email: chelseoagostinhof@gmail.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Escola Isabel Baptista. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Hide all pages
+                document.querySelectorAll('.page-content').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show the selected page
+                const pageId = this.getAttribute('data-page');
+                document.getElementById(pageId).classList.add('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Form submission
+        document.getElementById('student-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const email = document.getElementById('email').value;
+            const course = document.getElementById('course').value;
+            const status = document.getElementById('status').value;
+            
+            // Generate random ID
+            const id = Math.floor(1000 + Math.random() * 9000);
+            
+            // Create status badge
+            let statusClass = '';
+            let statusText = '';
+            
+            if (status === 'paid') {
+                statusClass = 'paid';
+                statusText = 'Ativo';
+            } else if (status === 'pending') {
+                statusClass = 'pending';
+                statusText = 'Pendente';
+            } else if (status === 'overdue') {
+                statusClass = 'overdue';
+                statusText = 'Inativo';
+            }
+            
+            // Get course name
+            let courseName = '';
+            switch(course) {
+                case 'informatica':
+                    courseName = 'Informática';
+                    break;
+                case 'gestao':
+                    courseName = 'Gestão Empresarial';
+                    break;
+                case 'enfermagem':
+                    courseName = 'Enfermagem';
+                    break;
+                case 'direito':
+                    courseName = 'Direito';
+                    break;
+                case 'farmacologia':
+                    courseName = 'Farmacologia';
+                    break;
+                case 'puniv':
+                    courseName = 'Cursos do PUNIV';
+                    break;
+            }
+            
+            // Add new row to table
+            const table = document.querySelector('#students table tbody');
+            const newRow = document.createElement('tr');
+            
+            newRow.innerHTML = `
+                <td>${id}</td>
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${courseName}</td>
+                <td>${email}</td>
+                <td><span class="status ${statusClass}">${statusText}</span></td>
+                <td class="actions">
+                    <button class="edit-btn">Editar</button>
+                    <button class="delete-btn">Eliminar</button>
+                </td>
+            `;
+            
+            table.appendChild(newRow);
+            
+            // Reset form
+            document.getElementById('student-form').reset();
+            
+            // Show success message
+            alert('Aluno adicionado com sucesso!');
+            
+            // Add event listeners to new buttons
+            addEventListenersToButtons();
+        });
+        
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contacto em breve.');
+            this.reset();
+        });
+        
+        // Function to add event listeners to buttons
+        function addEventListenersToButtons() {
+            // Delete buttons
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (confirm('Tem certeza que deseja eliminar este aluno?')) {
+                        this.closest('tr').remove();
+                    }
+                });
+            });
+            
+            // Edit buttons
+            const editButtons = document.querySelectorAll('.edit-btn');
+            editButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('Funcionalidade de edição em desenvolvimento.');
+                });
+            });
+        }
+        
+        // Initialize event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            addEventListenersToButtons();
+        });
+    </script>
+</body>
+</html>
