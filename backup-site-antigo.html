@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganho Global - Ganhe Dinheiro Online em 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* HEADER - Profissional */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2b6cb0;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 140px 0 80px;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            font-weight: 600;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* APPS SECTION */
+        .apps-section {
+            background: white;
+            padding: 80px 0;
+            border-radius: 30px 30px 0 0;
+            margin-top: -30px;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .app-card {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .app-card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .app-card p {
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .country-flags {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .flag {
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .flag.ao { background: #cc092f; color: white; } /* Angola */
+        .flag.br { background: #009c3b; color: white; } /* Brasil */
+        .flag.pt { background: #006600; color: white; } /* Portugal */
+        .flag.global { background: #2563eb; color: white; } /* Global */
+        
+        /* CALCULADORA */
+        .calculator {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 40px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .calculator h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .calc-inputs {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .calc-input {
+            background: rgba(255,255,255,0.9);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #2d3748;
+            font-size: 1rem;
+            width: 200px;
+        }
+        
+        .calc-result {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        /* COUNTDOWN */
+        .countdown {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .countdown-timer {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .calc-inputs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .calc-input {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo">💸 GanhoGlobal.com</div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ganhe €100-€500 por Mês em 2025</h1>
+            <p>Plataformas que funcionam em Angola, Brasil, Portugal e todo o mundo</p>
+            <button class="cta-button" onclick="scrollToApps()">👉 Ver Plataformas Comprovadas</button>
+        </div>
+    </section>
+
+    <!-- APPS SECTION -->
+    <section class="apps-section" id="apps">
+        <div class="container">
+            <h2 class="section-title">🚀 Melhores Plataformas que Pagam em 2025</h2>
+            
+            <div class="apps-grid">
+                <!-- PLATAFORMA 1 -->
+                <div class="app-card">
+                    <div class="country-flags">
+                        <span class="flag ao">Angola</span>
+                        <span class="flag br">Brasil</span>
+                        <span class="flag pt">Portugal</span>
+                    </div>
+                    <h3>Triaba Angola</h3>
+                    <p>Plataforma de pesquisas remuneradas específica para Angola. Pagamentos via transferência bancária e MBWay.</p>
+                    <button class="cta-button" onclick="openTriaba()">➡️ Participar em Pesquisas</button>
+                </div>
+                
+                <!-- PLATAFORMA 2 -->
+                <div class="app-card">
+                    <div class="country-flags">
+                        <span class="flag ao">Angola</span>
+                        <span class="flag global">Global</span>
+                    </div>
+                    <h3>TGM Panel Angola</h3>
+                    <p>Painel de pesquisas angolano com tarefas simples. Ganhe até 15.000 Kz por pesquisa completa.</p>
+                    <button class="cta-button" onclick="openTGMPanel()">➡️ Começar a Ganhar</button>
+                </div>
+                
+                <!-- PLATAFORMA 3 -->
+                <div class="app-card">
+                    <div class="country-flags">
+                        <span class="flag ao">Angola</span>
+                        <span class="flag br">Brasil</span>
+                        <span class="flag pt">Portugal</span>
+                        <span class="flag global">Global</span>
+                    </div>
+                    <h3>Pawns.app</h3>
+                    <p>Compartilhe sua internet e responda pesquisas. Ganhe em dólares, funciona em todo mundo.</p>
+                    <button class="cta-button" onclick="openPawns()">➡️ Instalar e Ganhar</button>
+                </div>
+
+                <!-- PLATAFORMA 4 -->
+                <div class="app-card">
+                    <div class="country-flags">
+                        <span class="flag br">Brasil</span>
+                        <span class="flag pt">Portugal</span>
+                        <span class="flag global">Global</span>
+                    </div>
+                    <h3>SurveyJunkie</h3>
+                    <p>Uma das maiores plataformas de pesquisas do mundo. Pagamentos via PayPal e gift cards.</p>
+                    <button class="cta-button" onclick="openSurveyJunkie()">➡️ Responder Pesquisas</button>
+                </div>
+
+                <!-- PLATAFORMA 5 -->
+                <div class="app-card">
+                    <div class="country-flags">
+                        <span class="flag global">Global</span>
+                    </div>
+                    <h3>Freecash</h3>
+                    <p>Complete tarefas, jogos e pesquisas. Pagamentos instantâneos em cripto e PayPal.</p>
+                    <button class="cta-button" onclick="openFreecash()">➡️ Ganhar Agora</button>
+                </div>
+
+                <!-- PLATAFORMA 6 -->
+                <div class="app-card">
+                    <div class="country-flags">
+                        <span class="flag ao">Angola</span>
+                        <span class="flag br">Brasil</span>
+                    </div>
+                    <h3>OpinionBox Angola</h3>
+                    <p>Plataforma de opiniões com foco no mercado angolano. Pagamentos em Kz via transferência.</p>
+                    <button class="cta-button" onclick="openOpinionBox()">➡️ Dar Opinião</button>
+                </div>
+            </div>
+
+            <!-- COUNTDOWN -->
+            <div class="countdown">
+                <h3>⏰ OFERTA LIMITADA!</h3>
+                <p>Bónus de €5 para os primeiros 100 inscritos hoje</p>
+                <div class="countdown-timer" id="countdown">05:00:00</div>
+                <button class="cta-button" onclick="openBonus()">🎁 Garantir Meu Bónus</button>
+            </div>
+
+            <!-- CALCULADORA -->
+            <div class="calculator">
+                <h3>📊 Quanto Você Pode Ganhar em 2025?</h3>
+                <div class="calc-inputs">
+                    <input type="number" class="calc-input" id="hoursDay" placeholder="Horas por dia (ex: 2)" min="1" max="24">
+                    <input type="number" class="calc-input" id="daysWeek" placeholder="Dias por semana (ex: 5)" min="1" max="7">
+                </div>
+                <button class="cta-button" onclick="calculateEarnings()">Calcular Meu Ganho</button>
+                <div class="calc-result" id="earningsResult"></div>
+                <p>Baseado em ganhos médios de €3-€8 por hora nas plataformas internacionais</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 GanhoGlobal.com - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Plataformas verificadas e seguras para ganhar dinheiro online</p>
+        </div>
+    </footer>
+
+    <script>
+        // FUNÇÕES JAVASCRIPT
+        function scrollToApps() {
+            document.getElementById('apps').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // LINKS REAIS PARA PLATAFORMAS QUE FUNCIONAM EM ANGOLA
+        function openTriaba() {
+            window.open('https://www.triaba.ao', '_blank');
+        }
+        
+        function openTGMPanel() {
+            window.open('https://www.tgmpanel.co.ao', '_blank');
+        }
+        
+        function openPawns() {
+            window.open('https://pawns.app', '_blank');
+        }
+        
+        function openSurveyJunkie() {
+            window.open('https://www.surveyjunkie.com', '_blank');
+        }
+        
+        function openFreecash() {
+            window.open('https://freecash.com', '_blank');
+        }
+        
+        function openOpinionBox() {
+            window.open('https://www.opinionbox.co.ao', '_blank');
+        }
+        
+        function openBonus() {
+            window.open('https://pawns.app', '_blank');
+        }
+        
+        // CALCULADORA DE GANHOS
+        function calculateEarnings() {
+            const hours = parseInt(document.getElementById('hoursDay').value) || 0;
+            const days = parseInt(document.getElementById('daysWeek').value) || 0;
+            
+            if (hours > 0 && days > 0) {
+                const weeklyEarnings = hours * days * 5; // €5/hora média
+                const monthlyEarnings = weeklyEarnings * 4;
+                
+                document.getElementById('earningsResult').innerHTML = 
+                    `€${monthlyEarnings}/mês 💰`;
+            } else {
+                alert('Por favor, preencha os dois campos!');
+            }
+        }
+        
+        // COUNTDOWN TIMER
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let time = 5 * 60 * 60; // 5 horas em segundos
+            
+            setInterval(() => {
+                const hours = Math.floor(time / 3600);
+                const minutes = Math.floor((time % 3600) / 60);
+                const seconds = time % 60;
+                
+                countdownElement.textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (time > 0) {
+                    time--;
+                }
+            }, 1000);
+        }
+        
+        // INICIAR
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+        });
+    </script>
+</body>
+</html>
