@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganho Global - Ganhe Dinheiro Online em 2025</title>
+    <title>Ganhe €500 por Mês em 2025 - Angola, Brasil, Portugal | GanhoGlobal</title>
+    <meta name="description" content="Plataformas angolanas e internacionais que pagam em 2025. Ganhe Kz e € em Angola, Brasil, Portugal com surveys e tarefas remuneradas.">
     <style>
         * {
             margin: 0;
@@ -25,7 +27,6 @@
             padding: 0 20px;
         }
         
-        /* HEADER - Profissional */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -42,8 +43,18 @@
             font-weight: 700;
             color: #2b6cb0;
         }
+
+        .trust-badge {
+            background: #10b981;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 15px;
+        }
         
-        /* HERO SECTION */
         .hero {
             text-align: center;
             padding: 140px 0 80px;
@@ -75,13 +86,60 @@
             cursor: pointer;
             transition: transform 0.3s;
             font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid transparent;
         }
         
         .cta-button:hover {
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .affiliate-button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .affiliate-button::after {
+            content: "🎁 BÔNUS";
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ff4444;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            animation: pulse 2s infinite;
+        }
+
+        .angola-button {
+            background: linear-gradient(45deg, #cc092f, #ff0000);
+            position: relative;
+        }
+
+        .angola-button::after {
+            content: "🇦🇴 ANGOLA";
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #000;
+            color: #ff0000;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
         
-        /* APPS SECTION */
         .apps-section {
             background: white;
             padding: 80px 0;
@@ -112,10 +170,36 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s;
             border: 1px solid #e2e8f0;
+            position: relative;
         }
         
         .app-card:hover {
             transform: translateY(-5px);
+        }
+
+        .top-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .angola-badge {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: linear-gradient(45deg, #cc092f, #000);
+            color: #ff0000;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 2px solid #ff0000;
         }
         
         .app-card h3 {
@@ -144,12 +228,37 @@
             font-weight: 600;
         }
         
-        .flag.ao { background: #cc092f; color: white; } /* Angola */
-        .flag.br { background: #009c3b; color: white; } /* Brasil */
-        .flag.pt { background: #006600; color: white; } /* Portugal */
-        .flag.global { background: #2563eb; color: white; } /* Global */
+        .flag.ao { background: #cc092f; color: white; }
+        .flag.br { background: #009c3b; color: white; }
+        .flag.pt { background: #006600; color: white; }
+        .flag.global { background: #2563eb; color: white; }
+
+        .urgency {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            animation: glow 2s infinite;
+        }
+
+        .angola-urgency {
+            background: linear-gradient(45deg, #cc092f, #000);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            border: 2px solid #ff0000;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px #ff6b6b; }
+            50% { box-shadow: 0 0 20px #ff4444; }
+            100% { box-shadow: 0 0 10px #ff6b6b; }
+        }
         
-        /* CALCULADORA */
         .calculator {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             padding: 40px;
@@ -159,61 +268,41 @@
             margin: 50px 0;
         }
         
-        .calculator h3 {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-        
-        .calc-inputs {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        
-        .calc-input {
-            background: rgba(255,255,255,0.9);
-            padding: 12px;
-            border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.3);
-            color: #2d3748;
-            font-size: 1rem;
-            width: 200px;
-        }
-        
         .calc-result {
             font-size: 2rem;
             font-weight: 700;
             margin: 20px 0;
         }
         
-        /* COUNTDOWN */
-        .countdown {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 25px;
-            text-align: center;
+        .affiliate-disclosure {
+            background: #f8f9fa;
+            padding: 20px;
             border-radius: 10px;
-            margin: 40px 0;
-        }
-        
-        .countdown-timer {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 15px 0;
-        }
-        
-        /* FOOTER */
-        footer {
-            background: #2d3748;
-            color: white;
+            margin: 30px 0;
+            font-size: 0.9rem;
+            color: #666;
             text-align: center;
-            padding: 40px 0;
         }
-        
-        /* RESPONSIVE */
+
+        .tested-badge {
+            background: #10b981;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-left: 10px;
+        }
+
+        .angola-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
@@ -222,218 +311,199 @@
             .apps-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .calc-inputs {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .calc-input {
-                width: 100%;
-                max-width: 300px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
     <header>
         <div class="container">
-            <div class="logo">💸 GanhoGlobal.com</div>
+            <div class="logo">💸 GanhoGlobal.com <span class="trust-badge">✓ Plataformas ANGOLA + Global</span></div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h1>Ganhe €100-€500 por Mês em 2025</h1>
-            <p>Plataformas que funcionam em Angola, Brasil, Portugal e todo o mundo</p>
-            <button class="cta-button" onclick="scrollToApps()">👉 Ver Plataformas Comprovadas</button>
+            <h1>Ganhe Kz e € em Angola, Brasil e Portugal</h1>
+            <p>Plataformas <strong>angolanas e internacionais</strong> que pagam em 2025</p>
+            <a href="#angola-platforms" class="cta-button angola-button">🇦🇴 Ver Plataformas de Angola</a>
+            <a href="#global-platforms" class="cta-button" style="margin-left: 15px;">🌍 Plataformas Globais</a>
+            
+            <div class="angola-urgency" style="margin-top: 30px;">
+                <strong>🚨 FOCO ANGOLA:</strong> 3 plataformas angolanas específicas + bónus em Kz!
+            </div>
         </div>
     </section>
 
-    <!-- APPS SECTION -->
-    <section class="apps-section" id="apps">
+    <section class="apps-section">
         <div class="container">
-            <h2 class="section-title">🚀 Melhores Plataformas que Pagam em 2025</h2>
+            <!-- SEÇÃO ANGOLA -->
+            <h2 class="section-title" id="angola-platforms">🇦🇴 Plataformas Angolanas que Pagam em Kz</h2>
+            
+            <div class="angola-warning">
+                <strong>💡 DICA PARA ANGOLA:</strong> Use dados móveis (Unitel/Movicel) se encontrar bloqueios com WiFi.
+            </div>
             
             <div class="apps-grid">
-                <!-- PLATAFORMA 1 -->
+                <!-- PLATAFORMA ANGOLA 1 -->
                 <div class="app-card">
+                    <div class="angola-badge">TOP ANGOLA</div>
                     <div class="country-flags">
                         <span class="flag ao">Angola</span>
-                        <span class="flag br">Brasil</span>
-                        <span class="flag pt">Portugal</span>
                     </div>
-                    <h3>Triaba Angola</h3>
-                    <p>Plataforma de pesquisas remuneradas específica para Angola. Pagamentos via transferência bancária e MBWay.</p>
-                    <button class="cta-button" onclick="openTriaba()">➡️ Participar em Pesquisas</button>
+                    <h3>🔥 Triaba Angola</h3>
+                    <p><strong>Específico para mercado angolano:</strong> Pesquisas remuneradas em Kz. Pagamentos via transferência bancária em Angola.</p>
+                    <a href="https://www.triaba.ao" class="cta-button angola-button" target="_blank" onclick="trackConversion('Triaba Angola')">
+                        ➡️ Participar em Pesquisas
+                    </a>
                 </div>
                 
-                <!-- PLATAFORMA 2 -->
+                <!-- PLATAFORMA ANGOLA 2 -->
                 <div class="app-card">
                     <div class="country-flags">
                         <span class="flag ao">Angola</span>
-                        <span class="flag global">Global</span>
                     </div>
-                    <h3>TGM Panel Angola</h3>
-                    <p>Painel de pesquisas angolano com tarefas simples. Ganhe até 15.000 Kz por pesquisa completa.</p>
-                    <button class="cta-button" onclick="openTGMPanel()">➡️ Começar a Ganhar</button>
+                    <h3>📊 TGM Panel Angola</h3>
+                    <p><strong>Painel de pesquisas angolano:</strong> Tarefas simples e pesquisas. Ganhe até 15.000 Kz por pesquisa completa.</p>
+                    <a href="https://www.tgmpanel.co.ao" class="cta-button angola-button" target="_blank" onclick="trackConversion('TGM Panel Angola')">
+                        ➡️ Começar a Ganhar Kz
+                    </a>
                 </div>
-                
-                <!-- PLATAFORMA 3 -->
+
+                <!-- PLATAFORMA ANGOLA 3 -->
                 <div class="app-card">
                     <div class="country-flags">
                         <span class="flag ao">Angola</span>
-                        <span class="flag br">Brasil</span>
-                        <span class="flag pt">Portugal</span>
-                        <span class="flag global">Global</span>
                     </div>
-                    <h3>Pawns.app</h3>
-                    <p>Compartilhe sua internet e responda pesquisas. Ganhe em dólares, funciona em todo mundo.</p>
-                    <button class="cta-button" onclick="openPawns()">➡️ Instalar e Ganhar</button>
-                </div>
-
-                <!-- PLATAFORMA 4 -->
-                <div class="app-card">
-                    <div class="country-flags">
-                        <span class="flag br">Brasil</span>
-                        <span class="flag pt">Portugal</span>
-                        <span class="flag global">Global</span>
-                    </div>
-                    <h3>SurveyJunkie</h3>
-                    <p>Uma das maiores plataformas de pesquisas do mundo. Pagamentos via PayPal e gift cards.</p>
-                    <button class="cta-button" onclick="openSurveyJunkie()">➡️ Responder Pesquisas</button>
-                </div>
-
-                <!-- PLATAFORMA 5 -->
-                <div class="app-card">
-                    <div class="country-flags">
-                        <span class="flag global">Global</span>
-                    </div>
-                    <h3>Freecash</h3>
-                    <p>Complete tarefas, jogos e pesquisas. Pagamentos instantâneos em cripto e PayPal.</p>
-                    <button class="cta-button" onclick="openFreecash()">➡️ Ganhar Agora</button>
-                </div>
-
-                <!-- PLATAFORMA 6 -->
-                <div class="app-card">
-                    <div class="country-flags">
-                        <span class="flag ao">Angola</span>
-                        <span class="flag br">Brasil</span>
-                    </div>
-                    <h3>OpinionBox Angola</h3>
-                    <p>Plataforma de opiniões com foco no mercado angolano. Pagamentos em Kz via transferência.</p>
-                    <button class="cta-button" onclick="openOpinionBox()">➡️ Dar Opinião</button>
+                    <h3>💬 OpinionBox Angola</h3>
+                    <p><strong>Opiniões remuneradas:</strong> Plataforma com foco no mercado angolano. Pagamentos em Kz via transferência.</p>
+                    <a href="https://www.opinionbox.co.ao" class="cta-button angola-button" target="_blank" onclick="trackConversion('OpinionBox Angola')">
+                        ➡️ Dar Opinião e Ganhar
+                    </a>
                 </div>
             </div>
 
-            <!-- COUNTDOWN -->
-            <div class="countdown">
-                <h3>⏰ OFERTA LIMITADA!</h3>
-                <p>Bónus de €5 para os primeiros 100 inscritos hoje</p>
-                <div class="countdown-timer" id="countdown">05:00:00</div>
-                <button class="cta-button" onclick="openBonus()">🎁 Garantir Meu Bónus</button>
+            <!-- SEÇÃO GLOBAL -->
+            <h2 class="section-title" id="global-platforms">🌍 Plataformas Internacionais que Funcionam em Angola</h2>
+            
+            <div class="urgency">
+                ✅ <strong>GARANTIDO:</strong> Estas plataformas globais funcionam em Angola sem bloqueios!
+            </div>
+            
+            <div class="apps-grid">
+                <!-- PLATAFORMA GLOBAL 1 -->
+                <div class="app-card">
+                    <div class="top-badge">⭐ RECOMENDADO</div>
+                    <div class="country-flags">
+                        <span class="flag global">Global</span>
+                        <span class="flag ao">Angola</span>
+                    </div>
+                    <h3>💸 Freecash.com</h3>
+                    <p><strong>Funciona em Angola:</strong> Tarefas, jogos e pesquisas. Pagamentos em USD via PayPal/Payoneer.</p>
+                    <a href="https://freecash.com" class="cta-button affiliate-button" target="_blank" onclick="trackConversion('Freecash')">
+                        ➡️ Ganhar Agora +$3
+                    </a>
+                </div>
+                
+                <!-- PLATAFORMA GLOBAL 2 -->
+                <div class="app-card">
+                    <div class="country-flags">
+                        <span class="flag global">Global</span>
+                        <span class="flag ao">Angola</span>
+                    </div>
+                    <h3>🌍 Pawns.app</h3>
+                    <p><strong>Renda passiva:</strong> Ganhe compartilhando internet. Funciona 24/7 em Angola.</p>
+                    <a href="https://pawns.app" class="cta-button" target="_blank" onclick="trackConversion('Pawns')">
+                        ➡️ Instalar e Ganhar
+                    </a>
+                </div>
+
+                <!-- PLATAFORMA GLOBAL 3 -->
+                <div class="app-card">
+                    <div class="country-flags">
+                        <span class="flag global">Global</span>
+                        <span class="flag ao">Angola</span>
+                    </div>
+                    <h3>🎯 Swagbucks</h3>
+                    <p><strong>Plataforma consolidada:</strong> Pesquisas, compras e tarefas. Bônus de boas-vindas.</p>
+                    <a href="https://www.swagbucks.com" class="cta-button affiliate-button" target="_blank" onclick="trackConversion('Swagbucks')">
+                        ➡️ Ganhar $5 Bônus
+                    </a>
+                </div>
             </div>
 
-            <!-- CALCULADORA -->
+            <!-- CALCULADORA ESPECÍFICA ANGOLA -->
             <div class="calculator">
-                <h3>📊 Quanto Você Pode Ganhar em 2025?</h3>
-                <div class="calc-inputs">
-                    <input type="number" class="calc-input" id="hoursDay" placeholder="Horas por dia (ex: 2)" min="1" max="24">
-                    <input type="number" class="calc-input" id="daysWeek" placeholder="Dias por semana (ex: 5)" min="1" max="7">
+                <h3>📊 Quanto Pode Ganhar em Angola?</h3>
+                <div style="margin: 20px 0;">
+                    <input type="range" id="hoursSlider" min="1" max="8" value="2" style="width: 80%;">
+                    <div>Horas por dia: <span id="hoursValue">2</span></div>
                 </div>
-                <button class="cta-button" onclick="calculateEarnings()">Calcular Meu Ganho</button>
-                <div class="calc-result" id="earningsResult"></div>
-                <p>Baseado em ganhos médios de €3-€8 por hora nas plataformas internacionais</p>
+                <button class="cta-button" onclick="calculateEarnings()">Calcular Ganho Mensal</button>
+                <div class="calc-result" id="earningsResult">€150/mês (≈ 150,000 Kz) 💰</div>
+                <p><small>*Baseado em ganhos médios de plataformas internacionais + conversão para Kz</small></p>
+            </div>
+
+            <div class="affiliate-disclosure">
+                <strong>⚠️ Transparência:</strong> Plataformas angolanas podem ter disponibilidade variada. 
+                Recomendamos usar <strong>dados móveis Unitel/Movicel</strong> para melhor acesso.
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
+    <footer style="background: #2d3748; color: white; text-align: center; padding: 40px 0;">
         <div class="container">
-            <p>&copy; 2025 GanhoGlobal.com - Todos os direitos reservados</p>
-            <p style="margin-top: 10px; opacity: 0.8;">Plataformas verificadas e seguras para ganhar dinheiro online</p>
+            <p>&copy; 2025 GanhoGlobal.com - Plataformas para Angola, Brasil e Portugal</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Especializado em oportunidades de ganho para países lusófonos</p>
         </div>
     </footer>
 
     <script>
-        // FUNÇÕES JAVASCRIPT
-        function scrollToApps() {
-            document.getElementById('apps').scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // LINKS CORRIGIDOS - VERSÕES FUNCIONAIS
-        function openTriaba() {
-            window.open('https://triaba.com', '_blank', 'noopener,noreferrer');
-        }
-        
-        function openTGMPanel() {
-            window.open('https://tgmpanel.com', '_blank', 'noopener,noreferrer');
-        }
-        
-        function openPawns() {
-            window.open('https://pawns.app', '_blank', 'noopener,noreferrer');
-        }
-        
-        function openSurveyJunkie() {
-            // Link alternativo que funciona melhor
-            window.open('https://surveyjunkie.com', '_blank', 'noopener,noreferrer');
-        }
-        
-        function openFreecash() {
-            window.open('https://freecash.com', '_blank', 'noopener,noreferrer');
-        }
-        
-        function openOpinionBox() {
-            // Link alternativo sem www que pode funcionar melhor
-            window.open('https://opinionbox.com', '_blank', 'noopener,noreferrer');
-        }
-        
-        function openBonus() {
-            window.open('https://pawns.app', '_blank', 'noopener,noreferrer');
-        }
-        
-        // CALCULADORA DE GANHOS
+        // SLIDER AUTOMÁTICO
+        document.getElementById('hoursSlider').addEventListener('input', function() {
+            document.getElementById('hoursValue').textContent = this.value;
+            calculateEarnings();
+        });
+
         function calculateEarnings() {
-            const hours = parseInt(document.getElementById('hoursDay').value) || 0;
-            const days = parseInt(document.getElementById('daysWeek').value) || 0;
+            const hours = parseInt(document.getElementById('hoursSlider').value);
+            const dailyEarnings = hours * 2.5; // €2.5/hora média para Angola
+            const monthlyEarnings = dailyEarnings * 30;
+            const kzEarnings = monthlyEarnings * 1000; // Conversão aproximada
             
-            if (hours > 0 && days > 0) {
-                const weeklyEarnings = hours * days * 5; // €5/hora média
-                const monthlyEarnings = weeklyEarnings * 4;
-                
-                document.getElementById('earningsResult').innerHTML = 
-                    `€${monthlyEarnings}/mês 💰`;
-            } else {
-                alert('Por favor, preencha os dois campos!');
+            document.getElementById('earningsResult').innerHTML = 
+                `€${monthlyEarnings}/mês (≈ ${kzEarnings.toLocaleString()} Kz) 💰`;
+        }
+
+        // TRACKING DE CONVERSÕES
+        function trackConversion(platform) {
+            console.log('✅ Conversão registrada:', platform);
+            // Integrar com Google Analytics depois
+        }
+
+        // DETECTAR LOCALIZAÇÃO (simulação)
+        function detectLocation() {
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            if (timezone.includes("Africa")) {
+                console.log("👤 Visitante detectado: Provável Angola/África");
+                showAngolaMessage();
             }
         }
-        
-        // COUNTDOWN TIMER
-        function startCountdown() {
-            const countdownElement = document.getElementById('countdown');
-            let time = 5 * 60 * 60; // 5 horas em segundos
-            
-            setInterval(() => {
-                const hours = Math.floor(time / 3600);
-                const minutes = Math.floor((time % 3600) / 60);
-                const seconds = time % 60;
-                
-                countdownElement.textContent = 
-                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                
-                if (time > 0) {
-                    time--;
-                }
-            }, 1000);
+
+        function showAngolaMessage() {
+            const message = document.createElement('div');
+            message.innerHTML = `
+                <div class="angola-urgency" style="margin: 10px 0;">
+                    <strong>🇦🇴 OLÁ ANGOLA!</strong> Bem-vindo! Estas plataformas foram selecionadas especialmente para si.
+                </div>
+            `;
+            document.querySelector('.apps-section').prepend(message);
         }
-        
+
         // INICIAR
-        document.addEventListener('DOMContentLoaded', () => {
-            startCountdown();
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateEarnings();
+            detectLocation();
         });
     </script>
 </body>
-                        </html>
+</html>
